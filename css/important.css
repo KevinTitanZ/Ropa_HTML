@@ -1,0 +1,101 @@
+.important-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+
+.important-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+/* Carrusel de tiendas */
+.stores-carousel {
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.carousel-track-stores {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.carousel-track-stores img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.carousel-track-stores img:hover {
+    filter: grayscale(0%);
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.info-box {
+    flex: 1 1 300px;
+    background-color: #f7f9fc;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h3 {
+    font-size: 1.6rem;
+    color: #4a6cf7;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botón de whatsappp */
+.whatsappp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.whatsappp-button:hover {
+    background-color: #1ebe5d;
+}
+
+.whatsappp-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
