@@ -1,8 +1,8 @@
-
-
 /* Navegación de pestañas */
 .tabs {
     margin: 30px 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .tab-buttons {
@@ -11,6 +11,7 @@
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     transition: border-color 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .tab-button {
@@ -51,6 +52,7 @@
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.4s ease, transform 0.4s ease;
+    width: 100%;
 }
 
 .tab-content.active {
@@ -66,6 +68,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
+    padding: 0 15px;
 }
 
 .category-button {
@@ -76,6 +79,7 @@
     cursor: pointer;
     font-size: 14px;
     transition: all 0.3s ease, transform 0.2s ease;
+    margin-bottom: 5px;
 }
 
 .category-button:hover {
@@ -95,6 +99,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    padding: 0 15px;
 }
 
 .product-card {
@@ -103,6 +108,7 @@
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    width: 100%;
 }
 
 .product-card:hover {
@@ -118,10 +124,6 @@
     display: block;
     transition: transform 0.5s ease;
 }
-
-/* .product-card:hover .product-image {
-    transform: scale(1.05);
-} */
 
 .product-info {
     padding: 15px;
@@ -151,11 +153,6 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* .product-card:hover .product-price {
-    transform: scale(1.05);
-    color: #2a4cf0;
-} */
-
 .product-category {
     font-size: 14px;
     color: #666;
@@ -163,122 +160,12 @@
     transition: color 0.3s ease;
 }
 
-
-.whatsapp-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #25D366;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(18, 140, 126, 0.3);
-}
-
-.whatsapp-icon {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-button:hover .whatsapp-icon {
-    transform: scale(1.1);
-}
-
-@media (max-width: 1024px) {
-    .whatsapp-button {
-        width: auto;
-        padding: 12px 18px;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .whatsapp-button {
-        width: 100%;
-        font-size: 1rem;
-        padding: 14px 22px;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    margin-top: 50px;
-    transition: background-color 0.4s ease, padding 0.3s ease;
-}
-
-/* footer:hover {
-    background-color: #222;
-} */
-
-footer p {
-    margin: 5px 0;
-    transition: color 0.3s ease;
-}
-
-footer p:hover {
-    color: #4a6cf7;
-}
-
-/* Transición adicional para cambios de pantalla */
-@media (prefers-reduced-motion: no-preference) {
-    .products-grid {
-        transition: grid-template-columns 0.4s ease;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-    .tab-button {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tab-buttons {
-        flex-direction: column;
-        border-bottom: none;
-    }
-    
-    .tab-button {
-        border-bottom: 1px solid #ddd;
-    }
-    
-    .tab-button.active::after {
-        display: none;
-    }
-}
-
-
 /* Estilos para los botones de producto */
 .product-buttons {
     display: flex;
     gap: 8px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .info-button {
@@ -294,6 +181,7 @@ footer p:hover {
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 100px;
 }
 
 .info-button:hover {
@@ -314,7 +202,36 @@ footer p:hover {
 }
 
 .whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
+    padding: 10px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 100px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(18, 140, 126, 0.3);
+}
+
+.whatsapp-icon {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover .whatsapp-icon {
+    transform: scale(1.1);
 }
 
 /* Estilos para la modal */
@@ -332,6 +249,7 @@ footer p:hover {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 15px;
 }
 
 .modal.show {
@@ -424,32 +342,16 @@ footer p:hover {
     margin-top: 20px;
 }
 
-/* Estilos para modal en escritorio */
-@media (min-width: 768px) {
-    .modal-product {
-        flex-direction: row;
-        gap: 30px;
-    }
-    
-    .modal-product-image {
-        flex: 0 0 40%;
-        margin-bottom: 0;
-    }
-    
-    .modal-product-details {
-        flex: 1;
-    }
-}
-
 /* Prevenir scroll cuando la modal está abierta */
 body.modal-open {
     overflow: hidden;
 }
 
-/* CARRUSLE */
+/* CARRUSEL */
 .promo-video, .top-products-carousel {
     margin: 2rem 0;
     text-align: center;
+    padding: 0 15px;
 }
 
 .top-products-carousel .carousel-container {
@@ -458,6 +360,7 @@ body.modal-open {
     justify-content: center;
     gap: 10px;
     overflow: hidden;
+    width: 100%;
 }
 
 .carousel-track {
@@ -466,7 +369,8 @@ body.modal-open {
     scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem 0;
-    width: 80%;
+    width: calc(100% - 60px);
+    scrollbar-width: none; /* Firefox */
 }
 
 .carousel-item {
@@ -490,10 +394,168 @@ body.modal-open {
     cursor: pointer;
     background: none;
     border: none;
+    flex-shrink: 0;
+    width: 30px;
 }
 
 .carousel-track::-webkit-scrollbar {
     display: none; /* Chrome, Safari y Edge */
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+    margin-top: 50px;
+    transition: background-color 0.4s ease, padding 0.3s ease;
+}
 
+footer p {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #4a6cf7;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .carousel-item {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .modal-product {
+        flex-direction: column;
+    }
+    
+    .modal-product-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .modal-product-details {
+        flex: 1;
+    }
+    
+    .carousel-item {
+        width: 160px;
+    }
+    
+    .product-buttons {
+        flex-direction: column;
+    }
+    
+    .info-button, .whatsapp-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .product-price {
+        font-size: 16px;
+    }
+    
+    .product-category {
+        font-size: 12px;
+    }
+    
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .carousel-track {
+        width: calc(100% - 40px);
+    }
+    
+    .carousel-item {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        border-bottom: none;
+        align-items: center;
+    }
+    
+    .tab-button {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .tab-button.active::after {
+        display: none;
+    }
+    
+    .category-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .carousel-item {
+        width: 130px;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+}
+
+/* Estilos para modal en escritorio */
+@media (min-width: 768px) {
+    .modal-product {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .modal-product-image {
+        flex: 0 0 40%;
+        margin-bottom: 0;
+    }
+    
+    .modal-product-details {
+        flex: 1;
+    }
+    
+    .product-buttons {
+        flex-direction: row;
+    }
+}
