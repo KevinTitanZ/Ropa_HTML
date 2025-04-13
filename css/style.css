@@ -477,3 +477,53 @@ footer p:hover {
 body.modal-open {
     overflow: hidden;
 }
+
+/* CARRUSLE */
+.promo-video, .top-products-carousel {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.top-products-carousel .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;
+    width: 80%;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.carousel-prev,
+.carousel-next {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Edge */
+}

@@ -1,4 +1,3 @@
-// Datos de productos
 const clothingProducts = [
     {
         id: 1,
@@ -172,19 +171,15 @@ function contactViaWhatsApp(productName, productPrice, type) {
     const typeText = type === 'clothing' ? 'Ropa' : 'Importación';
     const message = `Estoy interesado en este producto: ${productName} - $${productPrice.toFixed(2)} (${typeText})`;
     const encodedMessage = encodeURIComponent(message);
-    // Reemplaza con tu número de WhatsApp real
     window.open(`https://wa.me/963532407?text=${encodedMessage}`, '_blank');
 }
 
-// Función para mostrar información del producto en modal
 function showProductInfo(productId, type) {
-    // Encontrar el producto por ID
     const products = type === 'clothing' ? clothingProducts : importProducts;
     const product = products.find(p => p.id === productId);
     
     if (!product) return;
     
-    // Crear el modal si no existe
     let modal = document.getElementById('product-modal');
     if (!modal) {
         modal = document.createElement('div');
@@ -198,14 +193,12 @@ function showProductInfo(productId, type) {
         `;
         document.body.appendChild(modal);
         
-        // Agregar evento para cerrar el modal
         const closeBtn = modal.querySelector('.close-modal');
         closeBtn.addEventListener('click', () => {
             modal.classList.remove('show');
             document.body.classList.remove('modal-open');
         });
         
-        // Cerrar modal al hacer clic fuera del contenido
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.classList.remove('show');
@@ -214,7 +207,6 @@ function showProductInfo(productId, type) {
         });
     }
     
-    // Actualizar contenido del modal
     const modalContent = document.getElementById('modal-product-info');
     const typeText = type === 'clothing' ? 'Ropa' : 'Importación';
     const categoryName = product.category.charAt(0).toUpperCase() + product.category.slice(1);
@@ -312,7 +304,6 @@ document.querySelectorAll('.category-button').forEach(button => {
         });
         button.classList.add('active');
         
-        // Mostrar productos filtrados
         if (categoryType === 'clothing') {
             showProducts(clothingProducts, 'clothing-products', 'clothing', category);
         } else {
@@ -321,6 +312,6 @@ document.querySelectorAll('.category-button').forEach(button => {
     });
 });
 
-// Exponer funciones al ámbito global
+
 window.contactViaWhatsApp = contactViaWhatsApp;
 window.showProductInfo = showProductInfo;
