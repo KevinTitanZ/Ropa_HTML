@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Tienda Online</h1>
+            <p>Productos de calidad para todos</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="clothing-tab">Ropa</button>
+                <button class="tab-button" data-tab="imports-tab">Importaciones</button>
+            </div>
+            
+            <div class="tab-content active" id="clothing-tab">
+                <div class="categories" id="clothing-categories">
+                    <button class="category-button active" data-category="all">Todos</button>
+                    <button class="category-button" data-category="shirts">Camisetas</button>
+                    <button class="category-button" data-category="pants">Pantalones</button>
+                    <button class="category-button" data-category="dresses">Vestidos</button>
+                    <button class="category-button" data-category="accessories">Accesorios</button>
+                </div>
+                <div class="products-grid" id="clothing-products">
+                    <!-- Aquí se cargarán las tarjetas de productos de ropa -->
+                </div>
+            </div>
+            
+            <div class="tab-content" id="imports-tab">
+                <div class="categories" id="imports-categories">
+                    <button class="category-button active" data-category="all">Todos</button>
+                    <button class="category-button" data-category="electronics">Electrónica</button>
+                    <button class="category-button" data-category="beauty">Belleza</button>
+                    <button class="category-button" data-category="home">Hogar</button>
+                    <button class="category-button" data-category="others">Otros</button>
+                </div>
+                <div class="products-grid" id="imports-products">
+                    <!-- Aquí se cargarán las tarjetas de productos de importación -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Mi Tienda Online. Todos los derechos reservados.</p>
+            <p>Contacto: info@mitienda.com</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
