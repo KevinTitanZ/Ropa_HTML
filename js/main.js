@@ -173,7 +173,7 @@ function contactViaWhatsApp(productName, productPrice, type) {
     const message = `Estoy interesado en este producto: ${productName} - $${productPrice.toFixed(2)} (${typeText})`;
     const encodedMessage = encodeURIComponent(message);
     // Reemplaza con tu número de WhatsApp real
-    window.open(`https://wa.me/1234567890?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/963532407?text=${encodedMessage}`, '_blank');
 }
 
 // Función para mostrar información del producto en modal
